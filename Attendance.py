@@ -4,8 +4,8 @@ import time
 attendance_file = "attendance.txt"
 
 def mark_attendance():
-    emp_id = input("Enter your Employee ID: ")  # Employee enters their ID
-    timestamp = time.strftime("%Y-%m-%d %H:%M:%S")  # Get current date & time
+    emp_id = input("Enter your Employee ID: ")  
+    timestamp = time.strftime("%Y-%m-%d %H:%M:%S")  
 
     
     with open(attendance_file, "a") as file:
@@ -18,7 +18,7 @@ while True:
     print("\n--- Employee Attendance System ---")
     mark_attendance()
 
-    # Ask if another employee wants to mark attendance
+    
     more = input("Mark another attendance? (yes/no): ").strip().lower()
     if more != "yes":
         print("Exiting Attendance System.")
